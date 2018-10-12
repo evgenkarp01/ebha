@@ -1,0 +1,70 @@
+@import "_normalize";
+@import "../bourbon/bourbon";
+$Ob: 'OpenSans-Bold';
+$Oi: 'OpenSans-Italic';
+$Ol: 'OpenSans-Light';
+$O: 'OpenSans-Regular';
+$Osb: 'OpenSans-SemiBold';
+
+$ON: 'Open Sans';
+
+
+$normal: normal;
+$italic: italic;
+$bold: bold;
+$semibold: 600;
+$medium: 500;
+$heavy: 800;
+$black: 900;
+$light: 300;
+
+$dir:'../fonts/';
+$bg-color:#b4eaff;
+$wt:#fff;
+$bk:#000;
+$accent-color:#3aa2cc;
+$ttl-fz:36px;
+$fz:16px;
+$btn-color: #cb1436;
+
+
+@mixin font($fontname, $fweight, $fstyle, $fontfamily){
+    @font-face {
+                font-family: $fontfamily;
+                src: url($dir+$fontname+'.eot');
+                src: url($dir+$fontname+'.eot') format("eot"),
+                     url($dir+$fontname+'.ttf') format("truetype");
+                font-weight: $fweight;
+                font-style: $fstyle;
+    }
+}
+@include font($Ob, $bold, $normal, $ON);
+@include font($Oi, $normal, $italic, $ON);
+@include font($Ol, $light, $normal, $ON);
+@include font($O, $normal, $normal, $ON);
+@include font($Osb, $semibold, $normal, $ON);
+
+p {
+  font-size: em(112);
+}
+body { 
+    font-family: $ON, Tahoma, sans-serif;
+    line-height: 1;
+    background-color: #ffffff;
+    height: 100%;
+    position: relative;
+    font-size: $fz;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
