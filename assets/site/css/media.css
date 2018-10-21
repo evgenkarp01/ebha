@@ -28,6 +28,22 @@
   #main-lk .storage--tile {
     justify-content: space-around;
   }
+  #msg-box{
+    background: #fff;
+  }
+  .offset-btn-wt input[type="submit"]{
+    color: #000;
+    border-color: #000;
+  }
+  #deleteFromChat{
+    color: #000;
+  }
+  #main-lk .bg-img{
+    display: none;
+  }
+  footer.lk-in--footer .oplet-lk{
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 1230px) {
   footer {
@@ -79,6 +95,12 @@
     position: relative;
     z-index: 0;
   }
+  .chat-oplet{
+    padding: 0;
+  }
+  .main-auth .logo span em{
+    color: #FFF;
+  }
 }
 @media only screen and (max-width: 1015px) {
   .bg-img {
@@ -90,6 +112,9 @@
   header .logo span {
     font-size: 1.5rem;
     line-height: 1.6rem;
+  }
+  .reg__form form .col-sm-6{
+    width: 100%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -117,5 +142,12 @@
 
   .form-index form {
     padding: 60px 20px;
+  }
+  .lk-settings  .flex{
+    flex-direction: column;
+    align-items: center;
+  }
+  .reg__form {
+    padding: 30px 15px;
   }
 }

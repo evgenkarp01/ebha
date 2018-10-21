@@ -25,7 +25,7 @@
     'createdby' => 1,
     'createdon' => 1539623413,
     'editedby' => 1,
-    'editedon' => 1539889873,
+    'editedon' => 1540134432,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -45,9 +45,26 @@
     'hide_children_in_tree' => 0,
     'show_in_tree' => 1,
     'properties' => NULL,
+    'translate' => 
+    array (
+      0 => 'translate',
+      1 => 'omsYlcvd5cc',
+      2 => 'default',
+      3 => NULL,
+      4 => 'text',
+    ),
+    'thema' => 
+    array (
+      0 => 'thema',
+      1 => 'Тема: Горе от ума',
+      2 => 'default',
+      3 => NULL,
+      4 => 'text',
+    ),
     '_content' => '<!DOCTYPE html>
 <html lang="ru">
 <head>
+    
     <title>Трансляция - EBHA вебинары и удаленное обучение</title>
 <base href="[[!++site_url]]" />
 <meta charset="UTF-8" />
@@ -60,8 +77,23 @@
 <link rel="stylesheet" href="assets/site/css/style.css">
 <link rel="stylesheet" href="assets/site/css/media.css">
 <link rel="shortcut icon"  href="favicon.ico">
+
+    
 </head>
 <body>
+    <style>
+/* Здесь настроим css стили для чата*/
+.holder-html-chat{ border: 1px solid #ccc;padding:10px;background-color: #fff;width: 600px;}
+.html-chat-history{ max-width: 600px; overflow: auto;max-height: 900px; border: 1px solid #ccc;padding: 5px;}
+.html-chat-js-name{ margin-top:10px; }
+.html-chat-js-input{ max-width: 600px;max-height: 100px;width: 600px;margin-top:10px; }
+.html-chat-js-button-holder{ margin-bottom: 0px;margin-top: 10px; }
+.html-chat-js-button-holder input{ width: 220px; }
+.html-chat-js-answer{ float:right; }
+.html-chat-js-answer a{ color: #777;font-size: 12px; font-family: cursive;}
+.html-chat-js-answer a:hover{ color: #338;font-size: 12px; font-family: cursive;}
+.html-chat-msg{ margin: 0px; }
+</style>
     <div id="main-lk">
        <div class="container index-oplet">
             <header>
@@ -92,12 +124,13 @@
                             <div class="video">
                                 <div class="video__active">
                                     <div class="video__wrapper">
-                                        <iframe width="845" height="510" src="https://www.youtube.com/embed/qbDVuGei0MY?rel=0&amp;?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                                        <iframe id="frameID" width="845" height="510" src="https://www.youtube.com/embed/omsYlcvd5cc?rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                                        
                                     </div>
                                 </div>
     	                    </div>
     	                    <div class="thema-webinar">
-    	                        <h2>Тема: далеко-далеко за словестными горами и прямиком текст, проверка в жизнь набор слов</h2>
+    	                        <h2>Тема: Горе от ума</h2>
     	                    </div>
                         </div>
                     
@@ -108,7 +141,23 @@
                     </div>
                     <div class="chat-oplet mt-in">
                         <div class="chat-block">
-                            
+                            <div id="html-chat">
+
+ 
+                                <div id="msg-box">
+                                    <ul></ul>
+                                </div>
+                                <form id="t-box" action="?" style="">
+                                    <input type="hidden" class=\'name-chat\' value="[[!+modx.user.id:userinfo=`fullname`]]" >
+                                    <textarea class=\'msg\' placeholder="Сообщение"></textarea>
+                                    <div class="btn btn-wt offset-btn-wt"><input type="submit" value="Отправить"></div>
+                                </form>
+                                [[!+modx.user.username:is=`ewal`:then=` <form action="" id="del-chat">
+    <input type="hidden" value="clean" name="delete-from-chat">
+    <button id="deleteFromChat">Удалить чат!</button>
+    <div class="result"></div>
+</form>`]]
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -150,7 +199,81 @@
 <script src="assets/site/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/site/js/wow.min.js"></script>
 <script src="assets/site/js/custom.js"></script>
-
+        <script src="assets/site/js/jquery.timers.min.js" ></script>
+        <script src="assets/site/js/jquery.cookie.js" ></script>
+        <script>$(function(){
+  //Если куки с именем не пустые, тащим имя и заполняем форму с именем
+  
+  if($.cookie("name")!=""){$("#t-box input[class=\'name\']").attr("value", $.cookie("name"));}
+  
+  //Переменная отвечает за id последнего пришедшего сообщения
+  
+  var mid = 0;
+  
+  //Функция обновления сообщений чата
+  
+  function get_message_chat(){
+  
+    //Генерируем Ajax запрос
+    $.ajaxSetup({url: "assets/site/php/chat.php",global: true,type: "GET",data: "event=get&id="+mid+"&t="+
+        (new Date).getTime()});
+        
+    //Отправляем запрос
+    $.ajax({
+    
+      //Если все удачно
+      success: function(msg_j){
+      
+        //Если есть сообщения в принятых данных
+        if(msg_j.length > 2){
+          //Парсим JSON
+          var obj = JSON.parse(msg_j);
+          //Проганяем циклом по всем принятым сообщениям
+          for(var i=0; i < obj.length; i ++){
+            //Присваиваем переменной ID сообщения
+            mid = obj[i].id;
+            //Добавляем в чат сообщение
+            $("#msg-box ul").append("<li><b>"+obj[i].name+":</b> "+obj[i].msg+"</li>");
+          }
+          //Прокручиваем чат до самого конца
+          $("#msg-box ul").scrollTop(2000);
+        }
+      }
+    });
+  }
+ 
+  //Первый запрос к серверу. Принимаем сообщения
+  get_message_chat();
+ 
+  //Обновляем чат каждые две секунды
+  $("#t-box").everyTime(2000, \'refresh\', function() {
+    get_message_chat();
+  });
+ 
+  //Событие отправки формы
+  $("#t-box").submit(function() {
+    //Запрашиваем имя у юзера.
+    if($("#t-box input[class=\'name-chat\']").attr("value") == ""){ alert("Пожалуйста, введите свое имя!")}else{
+      //Добавляем в куки имя
+      $.cookie("nameChat", $("#t-box input[class=\'name-chat\']").attr("value"));
+ 
+      //Тащим сообщение из формы
+      var msg = $("#t-box textarea[class=\'msg\']").val();
+      //Если сообщение не пустое
+      if(msg != ""){
+        //Чистим форму
+        $("#t-box textarea[class=\'msg\']").attr("value", "");
+        //Генерируем Ajax запрос
+        $.ajaxSetup({url: "assets/site/php/chat.php", type: "GET",data: "event=set&name="+
+            $("#t-box input[class=\'name-chat\']").val()+"&msg="+msg});
+        //Отправляем запрос
+        $.ajax();
+      }
+    }
+    //Возвращаем false, чтобы форма не отправлялась.
+    return false;
+  });
+});</script>
 </body>
 </html>',
     '_isForward' => false,
@@ -235,6 +358,11 @@
         <ul class=""><li class="first"><a href="xranilishhe.html" >Хранилище</a></li><li class="active"><a href="translation.html" >Трансляция</a></li><li class="last"><a href="bitva-klanov.html" >Битва кланов</a></li></ul>
     </ul>
 </nav>',
+    '[[$privateBtn]]' => ' <form action="" id="del-chat">
+    <input type="hidden" value="clean" name="delete-from-chat">
+    <button id="deleteFromChat">Удалить чат!</button>
+    <div class="result"></div>
+</form>',
     '[[dateY]]' => '2018',
     '[[$footerLk]]' => '<footer class="lk-in--footer">
     <div class="container">
@@ -270,6 +398,79 @@
 <script src="assets/site/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/site/js/wow.min.js"></script>
 <script src="assets/site/js/custom.js"></script>',
+    '[[$chatJjs]]' => '$(function(){
+  //Если куки с именем не пустые, тащим имя и заполняем форму с именем
+  
+  if($.cookie("name")!=""){$("#t-box input[class=\'name\']").attr("value", $.cookie("name"));}
+  
+  //Переменная отвечает за id последнего пришедшего сообщения
+  
+  var mid = 0;
+  
+  //Функция обновления сообщений чата
+  
+  function get_message_chat(){
+  
+    //Генерируем Ajax запрос
+    $.ajaxSetup({url: "assets/site/php/chat.php",global: true,type: "GET",data: "event=get&id="+mid+"&t="+
+        (new Date).getTime()});
+        
+    //Отправляем запрос
+    $.ajax({
+    
+      //Если все удачно
+      success: function(msg_j){
+      
+        //Если есть сообщения в принятых данных
+        if(msg_j.length > 2){
+          //Парсим JSON
+          var obj = JSON.parse(msg_j);
+          //Проганяем циклом по всем принятым сообщениям
+          for(var i=0; i < obj.length; i ++){
+            //Присваиваем переменной ID сообщения
+            mid = obj[i].id;
+            //Добавляем в чат сообщение
+            $("#msg-box ul").append("<li><b>"+obj[i].name+":</b> "+obj[i].msg+"</li>");
+          }
+          //Прокручиваем чат до самого конца
+          $("#msg-box ul").scrollTop(2000);
+        }
+      }
+    });
+  }
+ 
+  //Первый запрос к серверу. Принимаем сообщения
+  get_message_chat();
+ 
+  //Обновляем чат каждые две секунды
+  $("#t-box").everyTime(2000, \'refresh\', function() {
+    get_message_chat();
+  });
+ 
+  //Событие отправки формы
+  $("#t-box").submit(function() {
+    //Запрашиваем имя у юзера.
+    if($("#t-box input[class=\'name-chat\']").attr("value") == ""){ alert("Пожалуйста, введите свое имя!")}else{
+      //Добавляем в куки имя
+      $.cookie("nameChat", $("#t-box input[class=\'name-chat\']").attr("value"));
+ 
+      //Тащим сообщение из формы
+      var msg = $("#t-box textarea[class=\'msg\']").val();
+      //Если сообщение не пустое
+      if(msg != ""){
+        //Чистим форму
+        $("#t-box textarea[class=\'msg\']").attr("value", "");
+        //Генерируем Ajax запрос
+        $.ajaxSetup({url: "assets/site/php/chat.php", type: "GET",data: "event=set&name="+
+            $("#t-box input[class=\'name-chat\']").val()+"&msg="+msg});
+        //Отправляем запрос
+        $.ajax();
+      }
+    }
+    //Возвращаем false, чтобы форма не отправлялась.
+    return false;
+  });
+});',
   ),
   'sourceCache' => 
   array (
@@ -320,9 +521,6 @@
         ),
         'policies' => 
         array (
-          'web' => 
-          array (
-          ),
         ),
         'source' => 
         array (
@@ -381,9 +579,6 @@
         ),
         'policies' => 
         array (
-          'web' => 
-          array (
-          ),
         ),
         'source' => 
         array (
@@ -428,9 +623,50 @@
         ),
         'policies' => 
         array (
-          'web' => 
+        ),
+        'source' => 
+        array (
+          'id' => 1,
+          'name' => 'Filesystem',
+          'description' => '',
+          'class_key' => 'sources.modFileMediaSource',
+          'properties' => 
           array (
           ),
+          'is_stream' => true,
+        ),
+      ),
+      'privateBtn' => 
+      array (
+        'fields' => 
+        array (
+          'id' => 31,
+          'source' => 1,
+          'property_preprocess' => false,
+          'name' => 'privateBtn',
+          'description' => '',
+          'editor_type' => 0,
+          'category' => 8,
+          'cache_type' => 0,
+          'snippet' => ' <form action="" id="del-chat">
+    <input type="hidden" value="clean" name="delete-from-chat">
+    <button id="deleteFromChat">Удалить чат!</button>
+    <div class="result"></div>
+</form>',
+          'locked' => false,
+          'properties' => 
+          array (
+          ),
+          'static' => false,
+          'static_file' => '',
+          'content' => ' <form action="" id="del-chat">
+    <input type="hidden" value="clean" name="delete-from-chat">
+    <button id="deleteFromChat">Удалить чат!</button>
+    <div class="result"></div>
+</form>',
+        ),
+        'policies' => 
+        array (
         ),
         'source' => 
         array (
@@ -519,9 +755,6 @@
         ),
         'policies' => 
         array (
-          'web' => 
-          array (
-          ),
         ),
         'source' => 
         array (
@@ -570,9 +803,186 @@
         ),
         'policies' => 
         array (
-          'web' => 
+        ),
+        'source' => 
+        array (
+          'id' => 1,
+          'name' => 'Filesystem',
+          'description' => '',
+          'class_key' => 'sources.modFileMediaSource',
+          'properties' => 
           array (
           ),
+          'is_stream' => true,
+        ),
+      ),
+      'chatJjs' => 
+      array (
+        'fields' => 
+        array (
+          'id' => 30,
+          'source' => 1,
+          'property_preprocess' => false,
+          'name' => 'chatJjs',
+          'description' => '',
+          'editor_type' => 0,
+          'category' => 8,
+          'cache_type' => 0,
+          'snippet' => '$(function(){
+  //Если куки с именем не пустые, тащим имя и заполняем форму с именем
+  
+  if($.cookie("name")!=""){$("#t-box input[class=\'name\']").attr("value", $.cookie("name"));}
+  
+  //Переменная отвечает за id последнего пришедшего сообщения
+  
+  var mid = 0;
+  
+  //Функция обновления сообщений чата
+  
+  function get_message_chat(){
+  
+    //Генерируем Ajax запрос
+    $.ajaxSetup({url: "assets/site/php/chat.php",global: true,type: "GET",data: "event=get&id="+mid+"&t="+
+        (new Date).getTime()});
+        
+    //Отправляем запрос
+    $.ajax({
+    
+      //Если все удачно
+      success: function(msg_j){
+      
+        //Если есть сообщения в принятых данных
+        if(msg_j.length > 2){
+          //Парсим JSON
+          var obj = JSON.parse(msg_j);
+          //Проганяем циклом по всем принятым сообщениям
+          for(var i=0; i < obj.length; i ++){
+            //Присваиваем переменной ID сообщения
+            mid = obj[i].id;
+            //Добавляем в чат сообщение
+            $("#msg-box ul").append("<li><b>"+obj[i].name+":</b> "+obj[i].msg+"</li>");
+          }
+          //Прокручиваем чат до самого конца
+          $("#msg-box ul").scrollTop(2000);
+        }
+      }
+    });
+  }
+ 
+  //Первый запрос к серверу. Принимаем сообщения
+  get_message_chat();
+ 
+  //Обновляем чат каждые две секунды
+  $("#t-box").everyTime(2000, \'refresh\', function() {
+    get_message_chat();
+  });
+ 
+  //Событие отправки формы
+  $("#t-box").submit(function() {
+    //Запрашиваем имя у юзера.
+    if($("#t-box input[class=\'name-chat\']").attr("value") == ""){ alert("Пожалуйста, введите свое имя!")}else{
+      //Добавляем в куки имя
+      $.cookie("nameChat", $("#t-box input[class=\'name-chat\']").attr("value"));
+ 
+      //Тащим сообщение из формы
+      var msg = $("#t-box textarea[class=\'msg\']").val();
+      //Если сообщение не пустое
+      if(msg != ""){
+        //Чистим форму
+        $("#t-box textarea[class=\'msg\']").attr("value", "");
+        //Генерируем Ajax запрос
+        $.ajaxSetup({url: "assets/site/php/chat.php", type: "GET",data: "event=set&name="+
+            $("#t-box input[class=\'name-chat\']").val()+"&msg="+msg});
+        //Отправляем запрос
+        $.ajax();
+      }
+    }
+    //Возвращаем false, чтобы форма не отправлялась.
+    return false;
+  });
+});',
+          'locked' => false,
+          'properties' => 
+          array (
+          ),
+          'static' => false,
+          'static_file' => '',
+          'content' => '$(function(){
+  //Если куки с именем не пустые, тащим имя и заполняем форму с именем
+  
+  if($.cookie("name")!=""){$("#t-box input[class=\'name\']").attr("value", $.cookie("name"));}
+  
+  //Переменная отвечает за id последнего пришедшего сообщения
+  
+  var mid = 0;
+  
+  //Функция обновления сообщений чата
+  
+  function get_message_chat(){
+  
+    //Генерируем Ajax запрос
+    $.ajaxSetup({url: "assets/site/php/chat.php",global: true,type: "GET",data: "event=get&id="+mid+"&t="+
+        (new Date).getTime()});
+        
+    //Отправляем запрос
+    $.ajax({
+    
+      //Если все удачно
+      success: function(msg_j){
+      
+        //Если есть сообщения в принятых данных
+        if(msg_j.length > 2){
+          //Парсим JSON
+          var obj = JSON.parse(msg_j);
+          //Проганяем циклом по всем принятым сообщениям
+          for(var i=0; i < obj.length; i ++){
+            //Присваиваем переменной ID сообщения
+            mid = obj[i].id;
+            //Добавляем в чат сообщение
+            $("#msg-box ul").append("<li><b>"+obj[i].name+":</b> "+obj[i].msg+"</li>");
+          }
+          //Прокручиваем чат до самого конца
+          $("#msg-box ul").scrollTop(2000);
+        }
+      }
+    });
+  }
+ 
+  //Первый запрос к серверу. Принимаем сообщения
+  get_message_chat();
+ 
+  //Обновляем чат каждые две секунды
+  $("#t-box").everyTime(2000, \'refresh\', function() {
+    get_message_chat();
+  });
+ 
+  //Событие отправки формы
+  $("#t-box").submit(function() {
+    //Запрашиваем имя у юзера.
+    if($("#t-box input[class=\'name-chat\']").attr("value") == ""){ alert("Пожалуйста, введите свое имя!")}else{
+      //Добавляем в куки имя
+      $.cookie("nameChat", $("#t-box input[class=\'name-chat\']").attr("value"));
+ 
+      //Тащим сообщение из формы
+      var msg = $("#t-box textarea[class=\'msg\']").val();
+      //Если сообщение не пустое
+      if(msg != ""){
+        //Чистим форму
+        $("#t-box textarea[class=\'msg\']").attr("value", "");
+        //Генерируем Ajax запрос
+        $.ajaxSetup({url: "assets/site/php/chat.php", type: "GET",data: "event=set&name="+
+            $("#t-box input[class=\'name-chat\']").val()+"&msg="+msg});
+        //Отправляем запрос
+        $.ajax();
+      }
+    }
+    //Возвращаем false, чтобы форма не отправлялась.
+    return false;
+  });
+});',
+        ),
+        'policies' => 
+        array (
         ),
         'source' => 
         array (
@@ -1731,9 +2141,6 @@ if (!empty($toPlaceholder)) {
         ),
         'policies' => 
         array (
-          'web' => 
-          array (
-          ),
         ),
         'source' => 
         array (
@@ -1771,9 +2178,6 @@ if (!empty($toPlaceholder)) {
         ),
         'policies' => 
         array (
-          'web' => 
-          array (
-          ),
         ),
         'source' => 
         array (
@@ -1790,6 +2194,108 @@ if (!empty($toPlaceholder)) {
     ),
     'modTemplateVar' => 
     array (
+      'translate' => 
+      array (
+        'fields' => 
+        array (
+          'id' => 1,
+          'source' => 1,
+          'property_preprocess' => false,
+          'type' => 'text',
+          'name' => 'translate',
+          'caption' => 'Нужно вставить только символы после',
+          'description' => 'https://youtu.be/',
+          'editor_type' => 0,
+          'category' => 10,
+          'locked' => false,
+          'elements' => '',
+          'rank' => 0,
+          'display' => 'default',
+          'default_text' => '',
+          'properties' => 
+          array (
+          ),
+          'input_properties' => 
+          array (
+            'allowBlank' => 'true',
+            'minLength' => '',
+            'maxLength' => '',
+            'regex' => '',
+            'regexText' => '',
+          ),
+          'output_properties' => 
+          array (
+          ),
+          'static' => false,
+          'static_file' => '',
+          'content' => '',
+        ),
+        'policies' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'id' => 1,
+          'name' => 'Filesystem',
+          'description' => '',
+          'class_key' => 'sources.modFileMediaSource',
+          'properties' => 
+          array (
+          ),
+          'is_stream' => true,
+        ),
+      ),
+      'thema' => 
+      array (
+        'fields' => 
+        array (
+          'id' => 2,
+          'source' => 1,
+          'property_preprocess' => false,
+          'type' => 'text',
+          'name' => 'thema',
+          'caption' => 'Тема трансляции',
+          'description' => '',
+          'editor_type' => 0,
+          'category' => 10,
+          'locked' => false,
+          'elements' => '',
+          'rank' => 0,
+          'display' => 'default',
+          'default_text' => '',
+          'properties' => 
+          array (
+          ),
+          'input_properties' => 
+          array (
+            'allowBlank' => 'true',
+            'minLength' => '',
+            'maxLength' => '',
+            'regex' => '',
+            'regexText' => '',
+          ),
+          'output_properties' => 
+          array (
+          ),
+          'static' => false,
+          'static_file' => '',
+          'content' => '',
+        ),
+        'policies' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'id' => 1,
+          'name' => 'Filesystem',
+          'description' => '',
+          'class_key' => 'sources.modFileMediaSource',
+          'properties' => 
+          array (
+          ),
+          'is_stream' => true,
+        ),
+      ),
     ),
   ),
 );

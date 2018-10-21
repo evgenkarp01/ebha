@@ -237,19 +237,13 @@ body {
   transform: translate(115%, 0);
 }
 
-a {
-  color: #000;
-}
-a:hover {
-  color: #48a2e2;
-}
 
-.btn-wt button, .btn input[type="submit"] {
+.btn-wt button, .btn-wt input[type="submit"] {
   border: 2px solid #ffffff;
   color: #fff;
 }
 
-.btn-bk button, .btn input[type="submit"] {
+.btn-bk button, .btn-bk input[type="submit"] {
   border: 2px solid #072642;
   color: #072642;
 }
@@ -452,8 +446,8 @@ header .logo a img {
   top: 0;
   bottom: 0;
   background: rgba(7, 38, 66, 0.1);
-  -webkit-animation: bg-dark 1.3s linear;
-          animation: bg-dark 1.3s linear;
+  -webkit-animation: bg-dark 0.7s linear;
+          animation: bg-dark 0.7s linear;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -676,6 +670,12 @@ footer.lk-in--footer .flex-down .copyright p a {
   top: 0;
   bottom: 0;
 }
+a {
+  color: #000;
+}
+a:hover {
+  color: #48a2e2;
+}
 
 .thema-webinar {
   margin-top: 20px;
@@ -699,3 +699,219 @@ footer.lk-in--footer .flex-down .copyright p a {
 .ttl-vilet{
   margin-top: 42px;
 }
+.chat-oplet{
+  padding-left: 40px;
+  margin-top: 68px;
+}
+#msg-box {
+  min-height: 316px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #0e4270;
+  background-color: #072642;
+  
+}
+#msg-box ul{
+  padding: 10px 30px;
+  max-height: 557px;
+  overflow: overlay;
+}
+#msg-box ul li{
+  list-style: none;
+  font-size: 13px;
+  line-height: 1.4rem;
+  border-bottom: 1px solid #6a6a6a;
+  padding: 10px 0;
+  
+}
+#msg-box ul li:last-child{
+  border: none;
+}
+#msg-box ul li b{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  margin-right: 15px;
+}
+
+#t-box textarea{
+    width: 100%;
+    background: #fff;
+    margin-top: 20px;
+    height: 50px;
+    padding: 5px 15px;
+    color: #000;
+    font-size: 15px;
+}
+#t-box .btn{
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  height: 50px;
+  box-shadow: 0px 1px 1px #fff inset;
+  background-color: #EFEFEF;
+  z-index: 999;
+  background-image: url("../img/polsun.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 0px;
+}
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+
+
+
+input::-webkit-input-placeholder {
+  color: #c6c6c6;
+}
+
+input::-moz-placeholder {
+  color: #c6c6c6;
+}
+
+input:-moz-placeholder {
+  color: #c6c6c6;
+}
+
+input:-ms-input-placeholder {
+  color: #c6c6c6;
+}
+textarea::-webkit-input-placeholder {
+  color: #c6c6c6;
+}
+
+textarea::-moz-placeholder {
+  color: #c6c6c6;
+}
+
+textarea:-moz-placeholder {
+  color: #c6c6c6;
+}
+
+textarea:-ms-input-placeholder {
+  color: #c6c6c6;
+}
+
+#del-chat{
+  text-align: center;
+}
+#deleteFromChat{
+    max-width: 150px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 600;
+    background: no-repeat;
+    margin: 25px auto;
+    border: none;
+    transition: color 0.4s;
+}
+#deleteFromChat:hover{
+  color: #48a2e2;
+}
+.error, .text-error{
+  color: red;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.lk-settings, .reg__form{
+  max-width: 650px;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 18px;
+  border-radius: 11px;
+  padding: 60px;
+}
+.lk-settings p{
+  padding: 5px 0;
+}
+.lk-settings  .flex{
+  display: flex;
+  justify-content: space-around;
+}
+.lk-settings .panel-body{
+  text-align: left;
+}
+.lk-settings .btn button{
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 185px;
+  height: 30px;
+  border-radius: 15px;
+  background: none;
+  position: relative;
+  transition: all 0.4s;
+}
+.reg__form form{
+  margin-top: 35px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.reg__form form input{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #727272;
+    background: #f6f6f6;
+    margin: 10px 0;
+    font-size: 1.125rem;
+    padding: 0 20px;
+}
+.reg__form form .btn{
+  margin-top: 30px;
+}
+.reg__form form .flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.reg__form form .col-sm-6{
+  width: 50%;
+  padding: 0 5px;
+}
+

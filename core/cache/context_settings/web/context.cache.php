@@ -62,8 +62,8 @@
     ),
     'OnDocFormPrerender' => 
     array (
-      1 => '1',
       5 => '5',
+      1 => '1',
     ),
     'OnFileCreateFormPrerender' => 
     array (

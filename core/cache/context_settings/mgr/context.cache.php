@@ -18,8 +18,8 @@
     ),
     'OnDocFormPrerender' => 
     array (
-      5 => '5',
       1 => '1',
+      5 => '5',
     ),
     'OnFileCreateFormPrerender' => 
     array (
@@ -35,8 +35,8 @@
     ),
     'OnManagerPageBeforeRender' => 
     array (
-      1 => '1',
       2 => '2',
+      1 => '1',
     ),
     'OnMODXInit' => 
     array (
@@ -57,8 +57,8 @@
     ),
     'OnRichTextEditorRegister' => 
     array (
-      4 => '4',
       1 => '1',
+      4 => '4',
     ),
     'OnSiteRefresh' => 
     array (
