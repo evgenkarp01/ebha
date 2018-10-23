@@ -409,6 +409,7 @@ header .logo a img {
 }
 
 .pagination-storage {
+  margin-top: 20px;
   text-align: right;
   margin-right: 10px;
 }
@@ -944,7 +945,8 @@ textarea:-ms-input-placeholder {
   padding: 0 15px;
   margin-top: 20px;
 }
-.eventCalendar-currentTitle, .eventCalendar-daysList li.eventCalendar-dayWithEvents a, .eventCalendar-list li time small, .bt, .eventCalendar-list .eventCalendar-noEvents, .eventCalendar-daysList li.today a{
+.eventCalendar-currentTitle, .eventCalendar-daysList li.eventCalendar-dayWithEvents a, .eventCalendar-list li time small, 
+.bt, .eventCalendar-list .eventCalendar-noEvents{
     background-color: #0e4270;
     outline: 1px solid #0e4270;
 }
@@ -960,7 +962,51 @@ textarea:-ms-input-placeholder {
 .eventCalendar-list li .eventCalendar-eventTitle{
   font-size: 130%;
   }
- .eventCalendar-daysList li.eventCalendar-dayWithEvents a:hover, .eventCalendar-list li time small a:hover, .bt:hover, .eventCalendar-daysList li.today a:hover{
+ .eventCalendar-daysList li.today a, .eventCalendar-daysList li.eventCalendar-dayWithEvents a:hover, .eventCalendar-list li time small a:hover, .bt:hover, .eventCalendar-daysList li.today a:hover{
     background-color: #48a2e2;
     outline: 1px solid #48a2e2;
 }
+
+.posts-battle {
+  margin-right: 25px;
+}
+.posts-battle .post-btl {
+  width: 100%;
+  border-bottom: 1px solid #C2C2C2;
+  padding: 25px 10px 25px 0;
+}
+.posts-battle .post-btl .fl-btl {
+  display: flex;
+  align-items: center;
+}
+.posts-battle .post-btl .fl-btl .wrap {
+  margin-left: 50px;
+}
+.posts-battle .post-btl .fl-btl .img img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.posts-battle .post-btl .fl-btl .autor-btl {
+  font-size: 18px;
+  font-weight: 600;
+}
+.posts-battle .post-btl .fl-btl .date-btl {
+  margin-top: 5px;
+}
+.posts-battle .post-btl .ttl-l {
+  margin-top: 28px;
+}
+.posts-battle .post-btl .ttl-l h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.posts-battle .post-btl .desc {
+  margin-top: 15px;
+}
+.posts-battle .post-btl .desc p {
+  line-height: 1.4;
+  font-size: 1rem;
+}
+.posts-battle .post-btl:last-child {
+  }
