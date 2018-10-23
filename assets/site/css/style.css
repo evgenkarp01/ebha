@@ -915,3 +915,52 @@ textarea:-ms-input-placeholder {
   padding: 0 5px;
 }
 
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out; 
+  -moz-transition: all 0.15s ease-out; 
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out; 
+  -moz-transition: all 0.15s ease-out; 
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+.eventCalendar-list-wrap{
+  padding: 0 15px;
+  margin-top: 20px;
+}
+.eventCalendar-currentTitle, .eventCalendar-daysList li.eventCalendar-dayWithEvents a, .eventCalendar-list li time small, .bt, .eventCalendar-list .eventCalendar-noEvents, .eventCalendar-daysList li.today a{
+    background-color: #0e4270;
+    outline: 1px solid #0e4270;
+}
+.eventCalendar-subtitle{
+  margin-bottom: 20px;
+}
+.eventCalendar-list li span, .eventCalendar-list li a{
+  padding-top: 10px;
+}
+.eventCalendar-list li p{
+  margin: 7px 0;
+}
+.eventCalendar-list li .eventCalendar-eventTitle{
+  font-size: 130%;
+  }
+ .eventCalendar-daysList li.eventCalendar-dayWithEvents a:hover, .eventCalendar-list li time small a:hover, .bt:hover, .eventCalendar-daysList li.today a:hover{
+    background-color: #48a2e2;
+    outline: 1px solid #48a2e2;
+}
