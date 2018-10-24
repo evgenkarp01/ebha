@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-10-23 18:45:21
+/* Smarty version 3.1.31, created on 2018-10-24 08:41:11
   from "/mnt/sites/ebha/manager/templates/default/resource/update.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5bcf6c41d7f7f4_34603121',
+  'unifunc' => 'content_5bd03027c0a0c7_58953526',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47e46a1a7fc62f846405c180c4822ab37f077d7d' => 
     array (
       0 => '/mnt/sites/ebha/manager/templates/default/resource/update.tpl',
-      1 => 1531361208,
+      1 => 1540188630,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bcf6c41d7f7f4_34603121 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd03027c0a0c7_58953526 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="modx-panel-resource-div"></div>
 <div id="modx-resource-tvs-div"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['tvOutput']->value)===null||$tmp==='' ? '' : $tmp);?>

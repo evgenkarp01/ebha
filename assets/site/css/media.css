@@ -101,6 +101,12 @@
   .main-auth .logo span em{
     color: #FFF;
   }
+  .posts-battle{
+    margin-right: 0;
+  }
+  .resources{
+    padding: 0 10px;
+  }
 }
 @media only screen and (max-width: 1015px) {
   .bg-img {
@@ -149,5 +155,28 @@
   }
   .reg__form {
     padding: 30px 15px;
+  }
+  #main-lk .col-pol-r{
+    margin-top: 45px;
+  }
+  .main-menu ul {
+    flex-direction: column;
+    align-items: center;
+    background: #efefef;
+  }
+  .main-menu ul li{
+    margin: 6px 0;
+  }
+  .main-menu ul li:hover{
+    content: "";
+    border-bottom: 0;
+    margin-bottom: 6px;
+  }
+  .main-menu ul li.active {
+    margin-bottom: 6px;
+  }
+  .main-menu ul li.active:hover {
+    margin-bottom: 6px;
+    border-bottom: 3px solid #646464;
   }
 }

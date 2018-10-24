@@ -299,7 +299,7 @@
 <script src="assets/site/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/site/js/wow.min.js"></script>
 <script src="assets/site/js/custom.js"></script>',
-    '[[getImageList?plPrefix=``&limit=`9`&maxLimit=`100`&offset=`0`&page=`1`&pageVarKey=`page`&totalVar=`page.total`&pageLimit=`5`&element=`getImageList`&pageNavVar=`page.nav`&pageCountVar=`pageCount`&pageLinkScheme=``&tplPage=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`&tplPageWrapper=`@INLINE <nav aria-label="pagination"><ul class="pagination">[[+first]][[+prev]][[+pages]][[+next]][[+last]]</ul></nav>`&tplPageActive=`@INLINE <li class="page-item active"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`&tplPageFirst=``&tplPageLast=``&tplPagePrev=`@INLINE <li class="control"><a href="[[+href]]">&laquo;</a></li>`&tplPageNext=`@INLINE <li class="control"><a href="[[+href]]">&raquo;</a></li>`&tplPageSkip=`@INLINE <li class="disabled"><span>...</span></li>`&tplPageFirstEmpty=``&tplPageLastEmpty=``&tplPagePrevEmpty=`@INLINE <li class="disabled"><span>&laquo;</span></li>`&tplPageNextEmpty=`@INLINE <li class="disabled"><span>&raquo;</span></li>`&cache=``&cacheTime=`3600`&cacheAnonymous=``&toPlaceholder=``&ajax=``&ajaxMode=``&ajaxElemWrapper=`#pdopage`&ajaxElemRows=`#pdopage .rows`&ajaxElemPagination=`#pdopage .pagination`&ajaxElemLink=`#pdopage .pagination a`&ajaxElemMore=`#pdopage .btn-more`&ajaxTplMore=`@INLINE <button class="btn btn-default btn-more">[[%pdopage_more]]</button>`&ajaxHistory=``&setMeta=`1`&strictMode=`1`&tvname=`linkVideoTv`&tpl=`linkVideoTpl`&where=`{"published":"1"}`&request=`2a12298314e62e89fe3e16850463584b`&setTotal=`1`]]' => '<div class="item">
+    '[[getImageList?plPrefix=``&limit=`9`&maxLimit=`100`&offset=`0`&page=`1`&pageVarKey=`page`&totalVar=`page.total`&pageLimit=`5`&element=`getImageList`&pageNavVar=`page.nav`&pageCountVar=`pageCount`&pageLinkScheme=``&tplPage=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`&tplPageWrapper=`@INLINE <nav aria-label="pagination"><ul class="pagination">[[+first]][[+prev]][[+pages]][[+next]][[+last]]</ul></nav>`&tplPageActive=`@INLINE <li class="page-item active"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`&tplPageFirst=``&tplPageLast=``&tplPagePrev=`@INLINE <li class="control"><a href="[[+href]]">&laquo;</a></li>`&tplPageNext=`@INLINE <li class="control"><a href="[[+href]]">&raquo;</a></li>`&tplPageSkip=`@INLINE <li class="disabled"><span>...</span></li>`&tplPageFirstEmpty=``&tplPageLastEmpty=``&tplPagePrevEmpty=`@INLINE <li class="disabled"><span>&laquo;</span></li>`&tplPageNextEmpty=`@INLINE <li class="disabled"><span>&raquo;</span></li>`&cache=``&cacheTime=`3600`&cacheAnonymous=``&toPlaceholder=``&ajax=``&ajaxMode=``&ajaxElemWrapper=`#pdopage`&ajaxElemRows=`#pdopage .rows`&ajaxElemPagination=`#pdopage .pagination`&ajaxElemLink=`#pdopage .pagination a`&ajaxElemMore=`#pdopage .btn-more`&ajaxTplMore=`@INLINE <button class="btn btn-default btn-more">[[%pdopage_more]]</button>`&ajaxHistory=``&setMeta=`1`&strictMode=`1`&tvname=`linkVideoTv`&tpl=`linkVideoTpl`&where=`{"published":"1"}`&request=`b7f7191927f6b5f387399f758b759dab`&setTotal=`1`]]' => '<div class="item">
     <div class="img"><img src="/assets/cache_image/assets/site/videos/video_208x116_7da.png" alt="ХБ шоу - ВОЕНКОМ / ЮЛЬКА / ГОЛУБКИ"></div>
     <div class="ttl">
         <p>ХБ шоу - ВОЕНКОМ / ЮЛЬКА / ГОЛУБКИ</p>
@@ -356,6 +356,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -414,6 +417,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -458,6 +464,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -546,6 +555,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -594,6 +606,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -1752,6 +1767,9 @@ if (!empty($toPlaceholder)) {
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -2685,6 +2703,9 @@ return $o;',
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -2714,6 +2735,9 @@ return $o;',
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -3881,6 +3905,9 @@ if ($isAjax) {
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -3990,6 +4017,9 @@ return $flag ? $modx->phpThumbOn->run($scriptProperties) : $modx->getOption(\'ph
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (

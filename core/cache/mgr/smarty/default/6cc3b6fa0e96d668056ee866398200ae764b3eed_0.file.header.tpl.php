@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-10-23 18:45:21
+/* Smarty version 3.1.31, created on 2018-10-24 08:30:00
   from "/mnt/sites/ebha/manager/templates/default/header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5bcf6c41d56d48_65908645',
+  'unifunc' => 'content_5bd02d88ed1a51_57056108',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6cc3b6fa0e96d668056ee866398200ae764b3eed' => 
     array (
       0 => '/mnt/sites/ebha/manager/templates/default/header.tpl',
-      1 => 1531361206,
+      1 => 1540188630,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bcf6c41d56d48_65908645 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd02d88ed1a51_57056108 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="<?php echo $_smarty_tpl->tpl_vars['_config']->value['manager_direction'];?>

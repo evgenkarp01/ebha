@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2018-10-23 18:45:21
+/* Smarty version 3.1.31, created on 2018-10-24 08:40:39
   from "/mnt/sites/ebha/manager/templates/default/resource/sections/tvs.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5bcf6c41cd9de0_30885047',
+  'unifunc' => 'content_5bd03007dc3f89_55907468',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3da8ad7efc3136c13f69fa009db226be08845a18' => 
     array (
       0 => '/mnt/sites/ebha/manager/templates/default/resource/sections/tvs.tpl',
-      1 => 1531361208,
+      1 => 1540188630,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bcf6c41cd9de0_30885047 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd03007dc3f89_55907468 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_cycle')) require_once '/mnt/sites/ebha/core/model/smarty/plugins/function.cycle.php';
 echo $_smarty_tpl->tpl_vars['OnResourceTVFormPrerender']->value;?>
 

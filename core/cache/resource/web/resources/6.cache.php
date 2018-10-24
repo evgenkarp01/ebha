@@ -24,8 +24,8 @@
     'cacheable' => 1,
     'createdby' => 1,
     'createdon' => 1539623531,
-    'editedby' => 1,
-    'editedon' => 1540325085,
+    'editedby' => 4,
+    'editedon' => 1540383935,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -48,7 +48,7 @@
     'calendarTv' => 
     array (
       0 => 'calendarTv',
-      1 => '[{"MIGX_id":"1","datacalend":"2018-10-26 05:00:00","titlecalend":"\\u0415\\u0432\\u0433\\u0435\\u043d\\u0438\\u0439 \\u0421\\u0430\\u0433\\u0430\\u0439\\u0434\\u0443\\u043a","desccalend":"\\u0438\\u0449\\u0443 \\u0430\\u0434\\u043c\\u0438\\u043d\\u0438\\u0441\\u0442\\u0440\\u0430\\u0442\\u043e\\u0440\\u0430 \\u0434\\u043b\\u044f \\u0433\\u0440\\u0443\\u043f\\u043f\\u044b \\u0412\\u041a \\u0438\\/\\u0438\\u043b\\u0438 \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430 \\u0438\\u043d\\u0441\\u0442\\u0430\\u0433\\u0440\\u0430\\u043c, \\u0440\\u0430\\u0431\\u043e\\u0442\\u0430 \\u043f\\u0440\\u043e\\u0441\\u0442\\u0430\\u044f, \\u0441\\u0434\\u0435\\u043b\\u044c\\u043d\\u0430\\u044f \\u043e\\u043f\\u043b\\u0430\\u0442\\u0430","linkcalend":"https:\\/\\/vk.com\\/id209498583"}]',
+      1 => '[{"MIGX_id":"1","datacalend":"2018-10-26 05:00:00","titlecalend":"\\u0415\\u0432\\u0433\\u0435\\u043d\\u0438\\u0439 \\u0421\\u0430\\u0433\\u0430\\u0439\\u0434\\u0443\\u043a","desccalend":"\\u0438\\u0449\\u0443 \\u0430\\u0434\\u043c\\u0438\\u043d\\u0438\\u0441\\u0442\\u0440\\u0430\\u0442\\u043e\\u0440\\u0430 \\u0434\\u043b\\u044f \\u0433\\u0440\\u0443\\u043f\\u043f\\u044b \\u0412\\u041a \\u0438\\/\\u0438\\u043b\\u0438 \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430 \\u0438\\u043d\\u0441\\u0442\\u0430\\u0433\\u0440\\u0430\\u043c, \\u0440\\u0430\\u0431\\u043e\\u0442\\u0430 \\u043f\\u0440\\u043e\\u0441\\u0442\\u0430\\u044f, \\u0441\\u0434\\u0435\\u043b\\u044c\\u043d\\u0430\\u044f \\u043e\\u043f\\u043b\\u0430\\u0442\\u0430","linkcalend":"https:\\/\\/vk.com\\/id209498583"},{"MIGX_id":"2","datacalend":"2018-10-25 15:15:31","titlecalend":"\\u0432 \\u0420\\u043e\\u0441\\u0442\\u043e\\u0432\\u0435-\\u043d\\u0430-\\u0414\\u043e\\u043d\\u0443 hi-tech","desccalend":"\\u0432 \\u0420\\u043e\\u0441\\u0442\\u043e\\u0432\\u0435-\\u043d\\u0430-\\u0414\\u043e\\u043d\\u0443 hi-tech","linkcalend":""}]',
       2 => 'default',
       3 => NULL,
       4 => 'migx',
@@ -56,7 +56,7 @@
     'battlePostTv' => 
     array (
       0 => 'battlePostTv',
-      1 => '[{"MIGX_id":"1","titlebattle":"почему то только вот так вот","datebattle":"2018-10-23 22:49:00","descbattle":"<p>У меня идет вывод вот почему то только вот так вот У меня идет вывод вот почему то только вот так вот</p>"},{"MIGX_id":"2","titlebattle":"проверьте","datebattle":"2018-10-24 22:51:12","descbattle":"<ul class=\\"serp-list serp-list_left_yes\\">\\n<li class=\\"serp-item\\" data-cid=\\"3\\" data-log-node=\\"l6rz\\">\\n<div class=\\"organic organic_with-recommendations_yes typo typo_text_m typo_line_s i-bem\\" data-bem=\\"{&quot;organic&quot;:{&quot;url&quot;:&quot;https://modx.ru/novosti-i-stati/article/216&quot;}}\\">\\n<div class=\\"organic__content-wrapper clearfix\\">\\n<div class=\\"text-container typo typo_text_m typo_line_m\\">\\n<div class=\\"extended-text extended-text_mode_js extended-text_state_short i-bem\\" data-bem=\\"{&quot;extended-text&quot;:{}}\\" data-log-node=\\"l6sa\\"><span class=\\"extended-text__short\\">проверьте. И здесь же у<em> Вас опечатка?</em><strong><em> </em>... </strong><span style=\\"text-decoration: line-through;\\">У меня не товары, а рес</span>урсы. У<span style=\\"text-decoration: underline;\\"> каждого из них есть</span> <strong>migx</strong> набор полей (даты, числа с запятой). По ним и пытаюсь сортировать. Павел Романов 09.09.2018 15:34 #. <span class=\\"link link_theme_normal extended-text__toggle i-bem\\" data-bem=\\"{&quot;link&quot;:{}}\\" data-log-node=\\"l6sb\\" data-counter=\\"[&quot;w&quot;,&quot;80.22.75&quot;,&quot;-adapters=extended-snippet,689=1086,84=88,-source=web&quot;]\\">Читать ещё</span></span></div>\\n</div>\\n</div>\\n</div>\\n</li>\\n</ul>"},{"MIGX_id":"3","titlebattle":"migx TV (MODx REVO) - date format","datebattle":"2018-10-23 23:04:44","descbattle":"<p> </p>\\n<div class=\\"votecell post-layout--left\\">\\n<div class=\\"vote\\"><span class=\\"vote-count-post \\">0</span><a class=\\"vote-down-off\\" title=\\"This question does not show any research effort; it is unclear or not useful\\">down vote</a><a class=\\"star-off\\" href=\\"https://stackoverflow.com/questions/29970469/migx-tv-modx-revo-date-format\\">favorite</a>\\n<div class=\\"favoritecount\\"> </div>\\n</div>\\n</div>\\n<div class=\\"postcell post-layout--right\\">\\n<div class=\\"post-text\\">\\n<p>I have a problem: I cannot bring <strong>date without time through MIGX TV</strong> created by TV type migx:</p>\\n</div>\\n</div>"}]',
+      1 => '[{"MIGX_id":"1","titlebattle":"почему то только вот так вот","datebattle":"2018-10-23 22:49:00","descbattle":"<p>У меня идет вывод вот почему то только вот так вот У меня идет вывод вот почему то только вот так вот</p>"},{"MIGX_id":"3","titlebattle":"Единственный материал","datebattle":"2018-10-24 15:24:55","descbattle":"<p>Единственный материал Единственный материал Единственный материал</p>"}]',
       2 => 'default',
       3 => NULL,
       4 => 'migx',
@@ -295,37 +295,43 @@
 <script src="assets/site/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/site/js/wow.min.js"></script>
 <script src="assets/site/js/custom.js"></script>',
-    '[[getImageList?plPrefix=``&limit=`2`&maxLimit=`100`&offset=`2`&page=`2`&pageVarKey=`page`&totalVar=`page.total`&pageLimit=`5`&element=`getImageList`&pageNavVar=`page.nav`&pageCountVar=`pageCount`&pageLinkScheme=``&tplPage=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`&tplPageWrapper=`@INLINE <nav aria-label="pagination"><ul class="pagination">[[+first]][[+prev]][[+pages]][[+next]][[+last]]</ul></nav>`&tplPageActive=`@INLINE <li class="page-item active"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`&tplPageFirst=``&tplPageLast=``&tplPagePrev=`@INLINE <li class="control"><a href="[[+href]]">&laquo;</a></li>`&tplPageNext=`@INLINE <li class="control"><a href="[[+href]]">&raquo;</a></li>`&tplPageSkip=`@INLINE <li class="disabled"><span>...</span></li>`&tplPageFirstEmpty=``&tplPageLastEmpty=``&tplPagePrevEmpty=`@INLINE <li class="disabled"><span>&laquo;</span></li>`&tplPageNextEmpty=`@INLINE <li class="disabled"><span>&raquo;</span></li>`&cache=``&cacheTime=`3600`&cacheAnonymous=``&toPlaceholder=``&ajax=``&ajaxMode=``&ajaxElemWrapper=`#pdopage`&ajaxElemRows=`#pdopage .rows`&ajaxElemPagination=`#pdopage .pagination`&ajaxElemLink=`#pdopage .pagination a`&ajaxElemMore=`#pdopage .btn-more`&ajaxTplMore=`@INLINE <button class="btn btn-default btn-more">[[%pdopage_more]]</button>`&ajaxHistory=``&setMeta=`1`&strictMode=`1`&tvname=`battlePostTv`&tpl=`battlePostTpl`&request=`88ae449105420a57b16b10d406f7de54`&setTotal=`1`]]' => '<div class="posts-battle">
+    '[[getImageList?plPrefix=``&limit=`2`&maxLimit=`100`&offset=`0`&page=`1`&pageVarKey=`page`&totalVar=`page.total`&pageLimit=`5`&element=`getImageList`&pageNavVar=`page.nav`&pageCountVar=`pageCount`&pageLinkScheme=``&tplPage=`@INLINE <li class="page-item"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`&tplPageWrapper=`@INLINE <nav aria-label="pagination"><ul class="pagination">[[+first]][[+prev]][[+pages]][[+next]][[+last]]</ul></nav>`&tplPageActive=`@INLINE <li class="page-item active"><a class="page-link" href="[[+href]]">[[+pageNo]]</a></li>`&tplPageFirst=``&tplPageLast=``&tplPagePrev=`@INLINE <li class="control"><a href="[[+href]]">&laquo;</a></li>`&tplPageNext=`@INLINE <li class="control"><a href="[[+href]]">&raquo;</a></li>`&tplPageSkip=`@INLINE <li class="disabled"><span>...</span></li>`&tplPageFirstEmpty=``&tplPageLastEmpty=``&tplPagePrevEmpty=`@INLINE <li class="disabled"><span>&laquo;</span></li>`&tplPageNextEmpty=`@INLINE <li class="disabled"><span>&raquo;</span></li>`&cache=``&cacheTime=`3600`&cacheAnonymous=``&toPlaceholder=``&ajax=``&ajaxMode=``&ajaxElemWrapper=`#pdopage`&ajaxElemRows=`#pdopage .rows`&ajaxElemPagination=`#pdopage .pagination`&ajaxElemLink=`#pdopage .pagination a`&ajaxElemMore=`#pdopage .btn-more`&ajaxTplMore=`@INLINE <button class="btn btn-default btn-more">[[%pdopage_more]]</button>`&ajaxHistory=``&setMeta=`1`&strictMode=`1`&tvname=`battlePostTv`&tpl=`battlePostTpl`&request=`14dd6114af36fb44e0f8d95548c9f552`&setTotal=`1`]]' => '<div class="posts-battle">
     <div class="post-btl">
         <div class="fl-btl">
             <div class="img"><img src="assets/site/img/psa.png" alt=""></div>
             <div class="wrap">
-                <div class="autor-btl">Евгений Сагайдук</div>
-                <div class="date-btl">23 Окт в 23:04</div>
+                <div class="autor-btl">Михаил Горбань</div>
+                <div class="date-btl">23 Окт в 22:49</div>
             </div>
         </div>
         <div class="ttl-l">
-            <h2>migx TV (MODx REVO) - date format</h2>
+            <h2>почему то только вот так вот</h2>
         </div>
         <div class="desc">
-            <p><p> </p>
-<div class="votecell post-layout--left">
-<div class="vote"><span class="vote-count-post ">0</span><a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a><a class="star-off" href="https://stackoverflow.com/questions/29970469/migx-tv-modx-revo-date-format">favorite</a>
-<div class="favoritecount"> </div>
-</div>
-</div>
-<div class="postcell post-layout--right">
-<div class="post-text">
-<p>I have a problem: I cannot bring <strong>date without time through MIGX TV</strong> created by TV type migx:</p>
-</div>
-</div></p>
+            <p><p>У меня идет вывод вот почему то только вот так вот У меня идет вывод вот почему то только вот так вот</p></p>
+        </div>
+    </div>
+</div><div class="posts-battle">
+    <div class="post-btl">
+        <div class="fl-btl">
+            <div class="img"><img src="assets/site/img/psa.png" alt=""></div>
+            <div class="wrap">
+                <div class="autor-btl">Михаил Горбань</div>
+                <div class="date-btl">24 Окт в 15:24</div>
+            </div>
+        </div>
+        <div class="ttl-l">
+            <h2>Единственный материал</h2>
+        </div>
+        <div class="desc">
+            <p><p>Единственный материал Единственный материал Единственный материал</p></p>
         </div>
     </div>
 </div>',
     '[[getImageList?
                 &tvname=`calendarTv`
                 &tpl=`eventCalendTpl`
-              ]]' => '{ "date": "2018-10-26 05:00:00", "title": "Евгений Сагайдук", "description": "ищу администратора для группы ВК и/или аккаунта инстаграм, работа простая, сдельная оплата", "url": "https://vk.com/id209498583" },',
+              ]]' => '{ "date": "2018-10-26 05:00:00", "title": "Евгений Сагайдук", "description": "ищу администратора для группы ВК и/или аккаунта инстаграм, работа простая, сдельная оплата", "url": "https://vk.com/id209498583" },{ "date": "2018-10-25 15:15:31", "title": "в Ростове-на-Дону hi-tech", "description": "в Ростове-на-Дону hi-tech", "url": "" },',
   ),
   'sourceCache' => 
   array (
@@ -376,6 +382,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -434,6 +443,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -478,6 +490,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -566,6 +581,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -614,6 +632,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -722,6 +743,9 @@
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -1880,6 +1904,9 @@ if (!empty($toPlaceholder)) {
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -1917,6 +1944,9 @@ if (!empty($toPlaceholder)) {
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -3084,6 +3114,9 @@ if ($isAjax) {
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -3165,6 +3198,9 @@ return "$day $month в $H:$M";',
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (
@@ -4098,6 +4134,9 @@ return $o;',
         ),
         'policies' => 
         array (
+          'web' => 
+          array (
+          ),
         ),
         'source' => 
         array (

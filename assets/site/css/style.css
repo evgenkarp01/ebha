@@ -969,6 +969,7 @@ textarea:-ms-input-placeholder {
 
 .posts-battle {
   margin-right: 25px;
+  width: 100%;
 }
 .posts-battle .post-btl {
   width: 100%;
